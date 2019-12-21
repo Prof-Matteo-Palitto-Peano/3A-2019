@@ -1,0 +1,37 @@
+s ready, we can use that instead.) */
+dt {
+    display: block }
+dd {
+    display: block;
+    text-indent: 0;
+    direction: rtl;
+    text-align: center;
+    overflow: hidden }
+dd img {
+    max-width: none }
+
+div.example {
+    background: white;
+    color: #603;
+    border: #603 dotted;
+    padding: 0.6em;
+    margin: 1em 2em }
+
+blockquote {
+    max-width: 620px;
+    padding: 0; /* Undo possible padding set by page style */
+    background: url(rs-right.png) right repeat-y }
+blockquote:before {
+    display: block;
+    line-height: 0;
+    background: url(rs-topright.png) top right no-repeat;
+    content: url(rs-topleft.png) }
+blockquote:after {
+    display: block;
+    line-height: 0;
+    background: url(rs-bottomright.png) bottom right no-repeat;
+    content: url(rs-bottomleft.png) }
+blockquote p {
+    margin: 0;
+    padding: 0 40px 20px 20px }
+

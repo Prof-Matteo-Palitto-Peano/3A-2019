@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>LOGIN Page</title>
+        <link rel="stylesheet" type="text/css" href="http://localhost/w3.css">
+    </head>
+    
+    <body>
+<div class="w3-card-4 w3-dark-grey">
+
+<div class="w3-container w3-center">
+  <h3>Inserisci il tuo Nome
+      <input type="text" name="nameField" id="nameField"/> oppure
+      <button class="w3-button w3-red" onclick="window.close()">Chiudi</button>
+</h3>
+  <!--img src="img_he.png" alt="Avatar" style="width:40%"-->
+  <h5>
+  <input type="image" src="/img_she.png" onclick='enterChatroom("she")' style="width:33%"/>
+  <input type="image" src="/img_he.png" onclick='enterChatroom("he")' style="width:33%"/>
+  
+ <!--button class="w3-button w3-green"  onclick='enterChatroom("he")'>Chat</button-->
+      </h5>
+</div>
+
+</div>
+        
+<script>
+    function enterChatroom(sex){
+        var xhttp = new XMLHttpRequest();
+        var name= document.getElementById("nameField").value;
+        if(name == "") {
+            alert("assicurati di aver inserito il Nick!");
+        } else {
+            xhttp.open("GET", "/ChatClient.html?name="+name+"&"+"sex="+sex, true);
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            //xhttp.send();
+            window.location.assign("/ChatClient.html?name="+name+"&"+"sex="+sex);
+        }
+}
+</script>
+
+    </body>
+    
+</html>
